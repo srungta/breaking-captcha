@@ -25,11 +25,10 @@ class FileHelperTest(unittest.TestCase):
             self.unique_folder_path = self.unique_folder_path + FileHelperTest.id_generator()
         self.unique_file_path = self.unique_folder_path + self.unique_file_path
         return super().setUp()
-    
+
     def tearDown(self):
         if os.path.exists(self.unique_folder_path):
             os.removedirs(self.unique_folder_path)
         if os.path.isfile(self.unique_file_path):
             os.remove(self.unique_file_path)
         return super().tearDown()
-

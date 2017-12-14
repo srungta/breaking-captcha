@@ -40,6 +40,7 @@
     <Compile Include="pre_process\__init__.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="tests\distribution_tests.py" />
     <Compile Include="tests\file_helper_tests.py">
       <SubType>Code</SubType>
     </Compile>
@@ -51,6 +52,7 @@
   <ItemGroup>
     <Folder Include="pre_process\" />
     <Folder Include="B:\GitHub\srungta.github\breaking-captcha\BreakingCaptcha\BreakingCaptcha\tests\" />
+    <Folder Include="tests\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
