@@ -6,7 +6,7 @@
     <ProjectGuid>0a29f0c2-ce8b-4e35-b581-95ddebf66ba5</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <ProjectTypeGuids>{4655ED63-DC5A-4EB5-A3FF-49AF52FA4BC6};{888888A0-9F3D-457C-B088-3A5042F75D52}</ProjectTypeGuids>
-    <StartupFile>BreakingCaptcha.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -28,10 +28,29 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BreakingCaptcha.py" />
+    <Compile Include="main.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="pre_process\distribution.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="pre_process\file_helper.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="pre_process\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tests\file_helper_tests.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda36-64" />
     <InterpreterReference Include="Global|PythonCore|3.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pre_process\" />
+    <Folder Include="B:\GitHub\srungta.github\breaking-captcha\BreakingCaptcha\BreakingCaptcha\tests\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
