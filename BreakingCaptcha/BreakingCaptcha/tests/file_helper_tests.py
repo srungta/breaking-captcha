@@ -10,8 +10,15 @@ class FileHelperTest(unittest.TestCase):
         self.assertTrue(os.path.exists(self.unique_folder_path))
 
     def test_file_creation(self):
+        file_helper.create_folder(self.unique_folder_path)
         file_helper.create_file(self.unique_file_path)
         self.assertTrue(os.path.isfile(self.unique_file_path))
+
+    def test_get_filenames_from_folder(self):
+        file_helper.create_folder(self.unique_folder_path)
+        file_helper.create_file(self.unique_file_path)
+        filenames = file_helper.get_filenames_from_folder(self.unique_folder_path)
+        self.assertEqual(len(filenames), 1)
 
     @staticmethod
     def id_generator():
@@ -20,15 +27,15 @@ class FileHelperTest(unittest.TestCase):
 
     def setUp(self):
         self.unique_folder_path = "B:\\"
-        self.unique_file_path = "testfile"
+        self.unique_file_path = "testfile.png"
         while os.path.exists(self.unique_folder_path):
             self.unique_folder_path = self.unique_folder_path + FileHelperTest.id_generator()
-        self.unique_file_path = self.unique_folder_path + self.unique_file_path
+        self.unique_file_path = self.unique_folder_path + "\\" + self.unique_file_path
         return super().setUp()
 
     def tearDown(self):
-        if os.path.exists(self.unique_folder_path):
-            os.removedirs(self.unique_folder_path)
         if os.path.isfile(self.unique_file_path):
             os.remove(self.unique_file_path)
+        if os.path.exists(self.unique_folder_path):
+            os.removedirs(self.unique_folder_path)
         return super().tearDown()
