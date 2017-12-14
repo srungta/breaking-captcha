@@ -1,3 +1,4 @@
+import shutil
 from pathlib import Path
 import os
 import string
@@ -12,3 +13,6 @@ def create_file(filepath):
 
 def get_filenames_from_folder(folderpath):
     return [f for f in os.listdir(folderpath) if os.path.isfile(os.path.join(folderpath, f))]
+
+def copy_file(source, destination):
+    shutil.copyfile(source, destination)

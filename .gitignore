@@ -101,3 +101,6 @@ ENV/
 .mypy_cache/
 
 BreakingCaptcha/.vs/
+/BreakingCaptcha/BreakingCaptcha/VALIDATIONSET
+/BreakingCaptcha/BreakingCaptcha/TRAINSET
+/BreakingCaptcha/BreakingCaptcha/TESTSET
